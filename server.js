@@ -33,6 +33,6 @@ mongoose
   .connect(process.env.MONGO_DB_URI)
   .then(() => {
     console.log("🤣🤣 Conectado con éxito a Atlas");
-    app.listen(5000, () => console.log('Escuchando en puerto 5000'));
+    app.listen(process.env.PORT, () => console.log('Escuchando en puerto 5000'));
   })
   .catch((error) => console.log(error));
