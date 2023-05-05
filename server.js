@@ -23,7 +23,7 @@ app.use((req, res) => {
 
 mongoose
   // .connect(
-  //   "mongodb+srv://a4caballo:Adjust123@cluster0.ymzcq8b.mongodb.net/proyecto?retryWrites=true&w=majority"
+  //
   // )
   // .then(() => {
   //   console.log("🤣🤣 Conectado con éxito a Atlas");

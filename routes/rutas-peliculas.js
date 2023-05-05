@@ -62,6 +62,7 @@ router.get("/buscar/:busca", async (req, res, next) => {
       pelicula: { $regex: search, $options: "i" },
     }).populate("usuario");
   } catch (err) {
+    console.log(err)
     const error = new Error("Ha ocurrido un error en la recuperación de datos");
     error.code = 500;
     return next(error);
