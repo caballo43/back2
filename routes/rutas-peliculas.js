@@ -6,8 +6,9 @@ const mongoose = require("mongoose");
 const Pelicula = require("../models/modelo-peliculas");
 const Usuario = require("../models/modelo-usuario");
 
-// const checkAuth = require("../middleware/check-auth"); // (1) Importamos middleware de autorización
+const checkAuth = require("../middleware/check-auth"); // (1) Importamos middleware de autorización
 
+router.use(checkAuth)
 // * Recuperar pelis desde la BDD en Atlas
 router.get("/", async (req, res, next) => {
   let peliculas;

@@ -6,7 +6,7 @@ const autorizacion = (req, res, next) => {
 		if (!token) {
 			throw new Error('Fallo de autenticación 1');
 		}
-		decodedTOKEN = jwt.verify(token, 'clave_supermegasecreta');
+		decodedTOKEN = jwt.verify(token, 'Networking43!');
 		req.userData = {
 			userId: decodedTOKEN.userId,
 		};
