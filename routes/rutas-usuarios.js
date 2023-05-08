@@ -69,7 +69,7 @@ router.post("/login", async (req, res, next) => {
   });
 });
 
-router.use(checkAuth)
+// router.use(checkAuth)
 router.get("/", async (req, res, next) => {
   let usuarios;
   try {
