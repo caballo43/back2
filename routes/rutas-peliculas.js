@@ -8,7 +8,7 @@ const Usuario = require("../models/modelo-usuario");
 
 const checkAuth = require("../middleware/check-auth"); // (1) Importamos middleware de autorización
 
-router.use(checkAuth)
+
 // * Recuperar pelis desde la BDD en Atlas
 router.get("/", async (req, res, next) => {
   let peliculas;
@@ -26,7 +26,7 @@ router.get("/", async (req, res, next) => {
     peliculas: peliculas,
   });
 });
-
+router.use(checkAuth)
 // * Recuperar un curso por su Id
 router.get("/:id", async (req, res, next) => {
   const idPelicula = req.params.id;
